@@ -13,6 +13,8 @@ class GenreViewController: UITableViewController {
     var genres = [Genre]()
     var selectedGenres = [Genre]()
     
+    let genreCountMax = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getGenres()
@@ -78,11 +80,11 @@ class GenreViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
-        if selectedGenres.count < 5 {
+        if selectedGenres.count < genreCountMax {
             selectedGenres.append(genres[indexPath.row])
             self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
             
-            if selectedGenres.count == 5 {
+            if selectedGenres.count == genreCountMax {
                 let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(transitionToActorSelection))
                 self.navigationItem.rightBarButtonItem = nextButton
             }
@@ -104,7 +106,7 @@ class GenreViewController: UITableViewController {
             self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
         }
         
-        if selectedGenres.count < 5 {
+        if selectedGenres.count < genreCountMax {
             self.navigationItem.rightBarButtonItem = nil
         }
     }

@@ -13,6 +13,7 @@ class ActorViewController: UITableViewController {
     var actors = [Actor]()
     var selectedActors = [Actor]()
     var currentPage = 1
+    let actorCountMax = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +81,11 @@ class ActorViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
-        if selectedActors.count < 5 {
+        if selectedActors.count < actorCountMax {
             selectedActors.append(actors[indexPath.row])
             self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
             
-            if selectedActors.count == 5 {
+            if selectedActors.count == actorCountMax {
                 let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextScreen))
                 self.navigationItem.rightBarButtonItem = nextButton
             }
@@ -106,7 +107,7 @@ class ActorViewController: UITableViewController {
             self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
         }
         
-        if selectedActors.count < 5 {
+        if selectedActors.count < actorCountMax {
             self.navigationItem.rightBarButtonItem = nil
         }
     }

@@ -11,3 +11,28 @@ Use your creativity to decide how the workflow should be. Please do note that th
 We provided some sample mockups, image assets and icons. Feel free to use them, or find or create your own design elements, so long as it provides a good user experience.
 
 Please note that this project is more open-ended than the previous ones. Experiment and give the app your own personal touch. There are many valid ways you could approach this problem.
+
+Project Instructions
+
+To complete this project, follow the instructions below. If you get stuck, ask a question in the community.
+
+You can submit this project in either Swift 2.3 or Swift 3. If you are using Xcode 8.x and Swift 2.3, you will need to download and use the empty Swift 2.3 starter files template to start your project. (Xcode 8 might still prompt you to convert the starter file, if so, please select “convert” and “Swift 2.3”. It should then tell you that there is nothing that needs to be changed.)
+
+First of all, please register as a user at themoviedb.org and request an API key.
+Once you have received your API key, begin experimenting with requests. Bear in mind this can be tested in a web browser, rather than in code, to help see what responses look like. You should also keep the API documentation handy for new ideas and troubleshooting.
+
+Create a workflow where both users can select a set of movie criteria such as genre, actors/actress, etc. The app should perform the matches and present the best possible selection to the users. Please include at least two parameters.
+Note: the screenshots provided are only suggestions, feel free to use other UI elements or ideas you might have.
+This project is somewhat open-ended, but make sure it demonstrates the proper usage of:
+UITableViews
+Asynchronous API call and Error handling
+Autolayout
+Data Modelling
+
+Please make sure you tested the app for a variety of inputs, including those which may not be ideal user behavior. Be sure your app can handle any issues gracefully.
+
+Extra Credit
+
+To get an "exceeds" rating, you can expand on the project in the following ways:
+
+Implement more than 2 selection criteria for the users to specify their preferences, and create the associated TableView and TableViewCells to support the selection.

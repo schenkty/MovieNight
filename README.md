@@ -31,7 +31,7 @@ Data Modelling
 
 Please make sure you tested the app for a variety of inputs, including those which may not be ideal user behavior. Be sure your app can handle any issues gracefully.
 
-Extra Credit
+# Extra Credit
 
 To get an "exceeds" rating, you can expand on the project in the following ways:
 
